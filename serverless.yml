@@ -1,5 +1,6 @@
 service:
   name: sls-base
+frameworkVersion: '3'
 
 plugins:
   - serverless-bundle
@@ -7,8 +8,7 @@ plugins:
 
 provider:
   name: aws
-  runtime: nodejs12.x
-  memorySize: 256
+  runtime: nodejs14.x
   stage: ${opt:stage, 'dev'}
   
 functions:
